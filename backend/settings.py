@@ -82,13 +82,15 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+mysql+pymysql://surgeaut_talha:Tquestion?330!@s24.hosterpk.com:3306
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_project_management',
-        'USER': 'root',
+        'NAME': 'surgeaut_django_project_management',
+        'USER': 'surgeaut_talha',
         'PASSWORD': 'Tquestion?330!',
-        'HOST': 'localhost',       # Or IP address if using remote DB
+        'HOST': 's24.hosterpk.com',       # Or IP address if using remote DB
         'PORT': '3306',            # Default MySQL port
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
