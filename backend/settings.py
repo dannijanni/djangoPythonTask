@@ -30,12 +30,18 @@ DEBUG = True
 
 # ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ["clever-creation-production-0526.up.railway.app"]
+ALLOWED_HOSTS = ['clever-creation-production-0526.up.railway.app']
+
 CSRF_TRUSTED_ORIGINS = [
     "https://clever-creation-production-0526.up.railway.app",
+    "https://*.up.railway.app",  # Optional: trust all Railway subdomains
 ]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')  # Required for HTTPS on Railway
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = 'static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Application definition
 
