@@ -40,8 +40,7 @@ else:
     ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://clever-creation-production-0526.up.railway.app/admin/login/?next=/admin/",
-    "https://*.up.railway.app",
+    "https://clever-creation-production-0526.up.railway.app",
 ]
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')  # Railway SSL support
@@ -81,7 +80,9 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'backend.urls'
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
-
+CORS_ALLOWED_ORIGINS = [
+    "https://clever-creation-production-0526.up.railway.app",
+]
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
