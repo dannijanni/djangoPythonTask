@@ -8,7 +8,7 @@ class Projects(models.Model):
     updated_at = models.DateTimeField(auto_now=True) 
 
     class Meta:
-        managed = False
+        # managed = False
         db_table = 'projects'
 
 
@@ -16,7 +16,7 @@ class Roles(models.Model):
     name = models.CharField(unique=True, max_length=8)
 
     class Meta:
-        managed = False
+        # managed = False
         db_table = 'roles'
 
 
@@ -34,7 +34,7 @@ class Tasks(models.Model):
     updated_at = models.DateTimeField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        # managed = False
         db_table = 'tasks'
 
 
@@ -47,5 +47,5 @@ class Users(models.Model):
     updated_at = models.DateTimeField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        # managed = False
         db_table = 'users'

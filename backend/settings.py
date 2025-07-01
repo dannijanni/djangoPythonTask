@@ -29,11 +29,17 @@ SECRET_KEY = 'django-insecure-l1=iqw4og-g-v4$drc+ntv5_nbj#1e!#ox^zb-m6dy3h@)-7pz
 DEBUG = True
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["clever-creation-production-0526.up.railway.app"]
+CSRF_TRUSTED_ORIGINS = [
+    "https://clever-creation-production-0526.up.railway.app",
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Application definition
+
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
