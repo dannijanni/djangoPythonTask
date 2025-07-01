@@ -40,7 +40,7 @@ else:
     ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://clever-creation-production-0526.up.railway.app",
+    "https://clever-creation-production-0526.up.railway.app/admin/login/?next=/admin/",
     "https://*.up.railway.app",
 ]
 
