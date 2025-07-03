@@ -31,7 +31,7 @@ class Tasks(models.Model):
     closed_by = models.ForeignKey('Users', models.DO_NOTHING, db_column='closed_by', related_name='tasks_closed_by_set', blank=True, null=True)
     created_at = models.DateTimeField(auto_now=True)
     closed_at = models.DateTimeField(blank=True, null=True)
-    updated_at = models.DateTimeField(blank=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         # managed = False
